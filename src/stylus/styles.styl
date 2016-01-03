@@ -1,0 +1,115 @@
+/* delnatte.be
+ *
+ * STYLUS/CSS Document - /assets/stylus/styles.styl
+ *
+ * coded by Pierre-Antoine "leny" Delnatte
+ *
+ * started @ 03/01/2016
+ */
+
+// imports
+@import "kouto-swiss"
+
+// resets
+normalize()
+box-sizing-reset()
+
+// fonts
+font-face( "Source Sans Pro", "./fonts/source-sans/sourcesanspro-light-webfont" )
+font-face( "Source Sans Pro", "./fonts/source-sans/sourcesanspro-regular-webfont", bold )
+SourceSansPro = "Source Sans Pro", font-stack( "Helvetica" )
+
+// vars
+mainBackgroundColor = #aaa
+boxBackgroundColor = white
+textColor = black
+
+// commons
+:focus
+    outline 0
+
+html
+    height 100%
+    background mainBackgroundColor
+    font normal 62.5%/1.5 SourceSansPro
+    -webkit-font-smoothing antialiased
+    -webkit-text-size-adjust 100%
+
+body
+    width 100%
+    overflow-x hidden
+    padding 4rem 0 0
+
+main
+    width 80%
+    margin 0 auto
+
+h1
+    display none
+
+section
+    position relative
+    width 100%
+    max-width 30rem
+    margin 0 auto 18rem
+    padding 1rem
+    background white
+    box-shadow 0 0 1rem rgba( black, .5 )
+    transform-style preserve-3d
+    transition transform .125s ease-in-out
+    figure
+        padding .5rem
+        background white
+        box-shadow 0 0 1rem rgba( black, .5 )
+        transform-style preserve-3d
+        transform-origin 25% 25% 0
+        transition transform .075s ease-in-out
+        img
+            display block
+            width 100%
+    a
+        color textColor
+        text-decoration none
+    h2
+        margin 0 0 1rem
+        font normal 2.4rem/1 SourceSansPro
+    p
+        margin 0
+        font bold 1.4rem SourceSansPro
+    &.julien
+        figure
+            absolute 3rem -6.25rem auto auto
+            width 50%
+            transform rotate( 5deg ) translate3d( 0, 0, 0 )
+        p
+            padding-right 40%
+        &:hover
+            transform rotate( -5deg ) translate3d( 0, 0, 0 )
+            figure
+                transform rotate( 10deg ) translate3d( 0, 0, 0 )
+    &.pierre-antoine
+        figure
+            absolute 3.5rem auto auto -6.5rem
+            width 50%
+            transform rotate( -3deg ) translate3d( 0, 0, 0 )
+        p
+            padding-left 45%
+        &:hover
+            transform rotate( -3deg ) translate3d( 0, 0, 0 )
+            figure
+                transform rotate( 6deg ) translate3d( 0, 0, 0 )
+
++media-query( screen, min-width 32rem )
+    body
+        padding 8rem 0 0
+
++media-query( screen, min-width 60rem )
+    main
+        max-width 72rem
+        clear fix
+
+    section.julien
+        float right
+
+    section.pierre-antoine
+        float left

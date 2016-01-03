@@ -1,0 +1,24 @@
+{
+  "name": "delnatte.be",
+  "description": "Static portal page for delnatte.be",
+  "version": "2016.1.3",
+  "private": true,
+  "homepage": "http://delnatte.be",
+  "author": {
+    "name": "leny",
+    "email": "info@flatland.be"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/leny/delnatte.be.git"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jade": "^0.15.0",
+    "grunt-contrib-stylus": "^0.22.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-csso": "^0.8.1",
+    "kouto-swiss": "^0.11.14",
+    "load-grunt-tasks": "^3.4.0"
+  }
+}

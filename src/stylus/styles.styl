@@ -37,12 +37,16 @@ html
 
 body
     width 100%
-    overflow-x hidden
-    padding 4rem 0 0
+    height 100%
 
 main
+    display flex
+    flex-direction column
+    justify-content center
     width 80%
+    min-height 100%
     margin 0 auto
+    padding 2rem 0 0
 
 h1
     display none
@@ -99,17 +103,13 @@ section
             figure
                 transform rotate( 6deg ) translate3d( 0, 0, 0 )
 
-+media-query( screen, min-width 32rem )
-    body
-        padding 8rem 0 0
-
 +media-query( screen, min-width 60rem )
     main
         max-width 72rem
-        clear fix
+        padding 8rem 0 0
+        flex-direction row-reverse
+        align-items flex-start
+        justify-content space-between
 
-    section.julien
-        float right
-
-    section.pierre-antoine
-        float left
+    section
+        margin 0

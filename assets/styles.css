@@ -223,12 +223,25 @@ html {
 }
 body {
   width: 100%;
-  overflow-x: hidden;
-  padding: 4rem 0 0;
+  height: 100%;
 }
 main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
   width: 80%;
+  min-height: 100%;
   margin: 0 auto;
+  padding: 2rem 0 0;
 }
 h1 {
   display: none;
@@ -324,27 +337,24 @@ section.pierre-antoine:hover figure {
   -ms-transform: rotate(6deg) translate3d(0, 0, 0);
   transform: rotate(6deg) translate3d(0, 0, 0);
 }
-@media screen and (min-width: 32rem) {
-  body {
-    padding: 8rem 0 0;
-  }
-}
 @media screen and (min-width: 60rem) {
   main {
     max-width: 72rem;
+    padding: 8rem 0 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-align-items: flex-start;
+    align-items: flex-start;
+    -webkit-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
   }
-  main:before,
-  main:after {
-    content: " ";
-    display: table;
-  }
-  main:after {
-    clear: both;
-  }
-  section.julien {
-    float: right;
-  }
-  section.pierre-antoine {
-    float: left;
+  section {
+    margin: 0;
   }
 }
